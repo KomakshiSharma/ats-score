@@ -1,0 +1,67 @@
+<!DOCTY<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Resume Optimizer</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>ATS Resume Optimizer</h1>
+
+        <div class="card">
+
+            <label>Upload Resume</label>
+            <input type="file" id="resumeFile" accept=".pdf,.doc,.docx">
+
+            <label>Job Description</label>
+            <textarea
+                id="jobDescription"
+                rows="10"
+                placeholder="Paste Job Description Here..."
+            ></textarea>
+
+            <button id="analyzeBtn">
+                Analyze Resume
+            </button>
+
+        </div>
+
+        <div id="loader" class="hidden">
+            Analyzing Resume...
+        </div>
+
+        <div id="resultSection" class="hidden">
+
+            <div class="score-card">
+                <h2>ATS Score</h2>
+                <div id="score">0%</div>
+            </div>
+
+            <div class="result-card">
+                <h3>Matched Skills</h3>
+                <ul id="matchedSkills"></ul>
+            </div>
+
+            <div class="result-card">
+                <h3>Missing Skills</h3>
+                <ul id="missingSkills"></ul>
+            </div>
+
+            <div class="result-card">
+                <h3>Suggestions</h3>
+                <ul id="suggestions"></ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+
+</body>
+</html>
+
