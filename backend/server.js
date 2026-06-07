@@ -113,3 +113,14 @@ app.listen(PORT, () => {
         `Server running on http://localhost:${PORT}`
     );
 });
+
+app.get("/test", (req, res) => {
+    res.json({
+        success: true,
+        message: "Backend is working"
+    });
+});
+
+app.get("/", (req, res) => {
+    res.send("ATS Backend Running Successfully 🚀");
+});
